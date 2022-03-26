@@ -1,0 +1,23 @@
+{
+  "name": "ericportis.com",
+  "version": "1.0.0",
+  "description": "Perhaps someday this will be where ericportis.com's code lives (not yet!)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eeeps/ericportis.com.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/eeeps/ericportis.com/issues"
+  },
+  "homepage": "https://github.com/eeeps/ericportis.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^1.0.0"
+  }
+}
