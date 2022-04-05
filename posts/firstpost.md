@@ -1,6 +1,7 @@
 ---
 layout: base.11ty.js
 title: First!
+tags: post
 ---
 
 Hey it's a post

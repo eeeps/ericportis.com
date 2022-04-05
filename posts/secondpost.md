@@ -1,6 +1,7 @@
 ---
 layout: base.11ty.js
 title: Second.
+tags: post
 ---
 
 Another post!
