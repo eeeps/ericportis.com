@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="en">
+	<head>
+	<meta charset="utf-8">
+	<title>Upload to Cloudinary with a Shortcut</title>
+	<meta name="viewport" content="width=device-width">
+</head>
+<body>
+<h1>header</h1>
+<p>Often, I want to take an image that exists locally on my Mac or iPhone and get a URL for it.</p>
+<ul>
+<li>Maybe I want to embed the image on a webpage.</li>
+<li>Maybe I just want to include it in some Markdown.</li>
+<li>Maybe I want to drop a freshly-minted screenshot into a GitHub comment, or bug report.</li>
+<li>Maybe I want to email a photo without worrying about attachment/storage quotas.</li>
+</ul>
+<p>I end up doing this, what – five? ten? – times a day. Here’s what I used to do:</p>
+<ol>
+<li>Type “cloudinary.com/console” into the nearest URL bar.</li>
+<li>Enter my username and password.</li>
+<li>Find my iPhone, launch Google Authenticator; memorize &amp; speed-type six digits (😤).</li>
+<li>Click “Media Library”.</li>
+<li>Drag the file into the browser window.</li>
+<li>Find the newly-uploaded asset and click the li’l 🔗 icon.</li>
+<li>Done.</li>
+</ol>
+<p>Too many steps! Here’s what I do now:</p>
+<ol>
+<li>Control-click the file.</li>
+<li>“Quick Actions” → “Upload to Cloudinary”</li>
+<li>Done!</li>
+</ol>
+<p><video src=TODO>Screencast</video></p>
+<p>How? With this: <a href="https://github.com/eeeps/upload-to-cloudinary-shortcut">Upload to Cloudinary Shortcut, on GitHub</a>.</p>
+<h2>How it works</h2>
+<p>Cloudinary has an <a href="https://cloudinary.com/documentation/upload_images">Upload API</a>. Most folks use it <a href="https://cloudinary.com/documentation/backend_sdks">via an SDK</a>, which makes things (especially <a href="https://cloudinary.com/documentation/upload_images#generating_authentication_signatures">generating authentication signatures</a>) easier. But! I fear/loathe dependencies and Shortcuts (surprisingly?) provides enough functionality that I managed to craft properly-signed HTTP POST requests, using just Shortcuts.</p>
+<p>Let’s walk through it.</p>
+<p>First things first, let’s set some variables.</p>
+<p><img src="TODO" alt="Screenshot of the first Action block"></p>
+<p>First: an image file. If we don‘t have one already (because the Shortcut was run as a Quick Action or from a Share Sheet, on an existing file/photo), we ask for one, from your Photo Library.</p>
+<p><img src="TODO" alt="Screenshot of a few more Action blocks"></p>
+<p>Next up: your account’s Cloud Name, API Key, and API Secret. The first time you install the Shortcut, it asks you for these. Your answers get stored in these Text “Actions”, forevermore. No, I'm not going to show you mine.</p>
+<p><img src="TODO" alt="Screenshot of the Endpoint URL action blocks"></p>
+<p>Now we can go about building our POST request. The first thing we’re going to need is a URL. So we stick your Cloud Name (captured earlier) into a string; simple enough.</p>
+<p><img src="TODO" alt="Screenshot of the group of Action blocks that generate the current Epoch timestamp"></p>
+<p>Next up: the current <a href="https://en.wikipedia.org/wiki/Unix_time">Unix (aka Epoch) timestamp</a>. I could have shelled out for this (<code>date '+%s'</code>) but I don't think that would have worked on iOS (?) and, well, this was more fun.</p>
+<p><img src="TODO" alt="Screenshot of the group of Action blocks that generate the required authentication signature"></p>
+<p>And now we come to the dreaded authentication signature. <a href="https://cloudinary.com/documentation/upload_images#generating_authentication_signatures">Cloudinary’s instructions for generating one</a> sound scary but in this case, at least, all we need is a <a href="https://en.wikipedia.org/wiki/SHA-1">SHA-1 hash</a> of two things stuck together: ① the timestamp ② our API Secret. Shortcuts can do this! Go Shortcuts, go!</p>
+<p><img src="TODO" alt="Screenshot of the action block that actually makes the POST request"></p>
+<p>And now, we fire off an HTTP POST request, with the file, API Key, timestamp, and signature all form-encoded into the body of the request. The first time I ran this, I worried Shortcuts wasn’t smart/flexible enough to wrap a binary file up into a POST request containing <a href="https://stackoverflow.com/questions/4526273/what-does-enctype-multipart-form-data-mean/28380690#28380690"><code>multipart/form-data</code></a>. But you know what? It is! Go! Shortcuts! Go!</p>
+<p><img src="TODO" alt="Screenshot of the action blocks that pull out and present the resulting URL from Cloudinary’s response"></p>
+<p>Then, we wait. Until Cloudinary spits back some JSON, which Shortcuts for some reason calls a “Dictionary,” but is totally equipped to parse and handle. So, we grab the freshly-minted URL out of the returned “Dictionary”, copy it to the clipboard, and alert the user that our work is done (or show the full JSON response if there was an error).</p>
+<p>The End!</p>
+<h2>Bonus: transformations, too</h2>
+<p>Once you’ve got a Cloudinary URL, it’s easy enough to start adding transformations to it.</p>
+<p><video src=TODO>Screencast</video></p>
+<p>Ninety-five percent of the time I run this thing, I add <a href="https://cloudinary.com/documentation/image_optimization#automatic_quality_selection_q_auto"><code>q_auto</code></a> to the URL. Beyond that: need to turn a HEIC from your iPhone into something you can actually share with anyone? Want to turn a 12MP JPEG into an optimized, 1200-pixel-wide AVIF? Heck, need to take a 16:9 something-or-other and smart-crop it to a square around the main subject’s face? All of these abilities, and many more, are just a few keystrokes away.</p>
+<p><a href="https://github.com/eeeps/upload-to-cloudinary-shortcut">Have fun!</a></p>
+
+</body>
+</html>
