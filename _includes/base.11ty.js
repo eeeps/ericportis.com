@@ -10,6 +10,7 @@ return `
 	<meta charset="utf-8">
 	<title>${data.title}</title>
 	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="/css/base.css">
 </head>
 <body>
 <h1>header</h1>

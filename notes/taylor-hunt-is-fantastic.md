@@ -1,6 +1,5 @@
 ---
 layout: base.11ty.js
-tags: note
 date: 2022-04-04T20:49-07
 ---
 
