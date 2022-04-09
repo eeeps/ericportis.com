@@ -1,7 +1,6 @@
 ---
 layout: base.11ty.js
 title: My slow computer helped me find a bug
-tags: post
 date: 2022-04-05T12:00-07
 ---
 

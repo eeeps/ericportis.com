@@ -1,7 +1,7 @@
 ---
 layout: base.11ty.js
 title: Upload to Cloudinary with a Shortcut
-tags: post draft
+tags: draft
 ---
 
 Often, I want to take an image that exists locally on my Mac or iPhone and get a URL for it.
