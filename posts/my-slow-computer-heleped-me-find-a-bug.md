@@ -14,5 +14,5 @@ Yaron filed [a bug](https://bugs.chromium.org/p/chromium/issues/detail?id=130338
 
 You hear about the importance of testing on slow machines. Good things happen when developers experience their software in the way that it is largely going to be experienced. It was notable and impactful to live this out.
 
-*And also,* [a new, shiny, top-of-the-line MacBook Pro](https://browser.geekbench.com/macs/macbook-pro-16-inch-2021-apple-m1-max) should be arriving at my house sometime this week. I can’t wait.
+*And also,* [a new M1 MacBook Pro](https://browser.geekbench.com/macs/macbook-pro-13-inch-late-2020) should be arriving at my house sometime this week. I can’t wait.
 
