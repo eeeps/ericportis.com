@@ -1,20 +1,22 @@
 
 <!doctype html>
 <html lang="en">
-	<head>
+<head>
 	<meta charset="utf-8">
 	<title>My slow computer helped me find a bug</title>
 	<meta name="viewport" content="width=device-width">
 	<link rel="stylesheet" href="/css/base.css">
+	<link rel="webmention" href="https://webmention.ericportis.com" />
+	<link rel="me" href="https://twitter.com/etportis" />
+	<link rel="me" href="https://github.com/eeeps" />
 </head>
 <body>
-<h1>header</h1>
 <p>Recently, one of my smarty-pants colleagues (<a href="https://il.linkedin.com/in/yaron-shmueli-99770b2">Yaron Shmueli</a>) presented some groundbreaking work he’d done on encoding animated AVIFs containing transparency. If <a href="https://cloudinary.com">Cloudinary</a> could transcode GIFs to animated AVIFs, we could save our customers and our customers’ customers mind-boggling amounts of bandwidth. Amazing! Fantastic!</p>
 <p>Except! When I clicked the demo link, well, it looked terrible. Stuttering all over the place. Opening dev tools revealed a sea of dropped frames and long tasks.</p>
 <p>Turns out, playing these animated AVIFs took far more CPU (relatively speaking) than the equivalent GIFs, for everybody. But <a href="https://browser.geekbench.com/macs/macbook-pro-13-inch-mid-2017-intel-core-i5-7267u-3-1-ghz-2-cores">my machine</a> happened to be the oldest; it was the only one that couldn’t keep up with the frame rate. So, I was the only one who “saw” the issue.</p>
 <p>Yaron filed <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1303388">a bug</a> with Chrome. Which led to <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1307888">another bug</a>, and a couple of patches. And now animated AVIFs are faster for everyone, forever.</p>
 <p>You hear about the importance of testing on slow machines. Good things happen when developers experience their software in the way that it is largely going to be experienced. It was notable and impactful to live this out.</p>
-<p><em>And also,</em> <a href="https://browser.geekbench.com/macs/macbook-pro-16-inch-2021-apple-m1-max">a new, shiny, top-of-the-line MacBook Pro</a> should be arriving at my house sometime this week. I can’t wait.</p>
+<p><em>And also,</em> <a href="https://browser.geekbench.com/macs/macbook-pro-13-inch-late-2020">a new M1 MacBook Pro</a> should be arriving at my house sometime this week. I can’t wait.</p>
 
 </body>
 </html>
