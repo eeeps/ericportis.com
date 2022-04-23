@@ -1,0 +1,4 @@
+/*
+  Accept-CH: Sec-CH-DPR, Sec-CH-Width, Sec-CH-Viewport-Width
+  Permissions-Policy: ch-dpr=(https://mo.ericportis.com), ch-width=(https://mo.ericportis.com), ch-viewport-width=(https://mo.ericportis.com) 
+
