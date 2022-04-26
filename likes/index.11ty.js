@@ -10,19 +10,12 @@ exports.data = {
 
 exports.render = function(data) {
 
-	const prettyDate = function( date ) {
-		const dayNumber = date.getDate();
-		const year = date.getFullYear();
-		const monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'November', 'December'][ date.getMonth() ];
-		return `${ monthName } ${ dayNumber }, ${ year }`
-	}
+
 
 	return `
 <main class="h-feed">
 <h1>Likes</h1>
-${ data.likes
-		.sort( ( a, b ) => a.data.date - b.data.date )
-		.map( ( like, index ) => {
+${ data.likes.map( ( like, index ) => {
 
 		console.log(like.data.url, like.date);
 
@@ -52,7 +45,8 @@ ${ data.likes
 		return `
 <article class="h-entry">
 	<header>
-		<a href="${ like.url }">★</a> <time class="dt-published">${ prettyDate( like.date ) }</time>
+		<a href="${ like.url }">★</a> 
+		<time class="dt-published">${ this.readableDate( like.date ) }</time>
 	</header>
 	<a class="u-like-of" href="${ like.data.url }">${ title }</a>${ authors ? authors : '' }
 </article>

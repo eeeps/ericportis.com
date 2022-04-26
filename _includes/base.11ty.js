@@ -16,6 +16,19 @@ return `
 	<link rel="me" href="https://github.com/eeeps" />
 </head>
 <body>
+
+<header>
+	<nav>
+		<ul>
+			<li><a href="/">e</a>
+			<li><a href="/longs/">Longs</a>
+			<li><a href="/shorts/">Shorts</a>
+			<li><a href="/likes/">Likes</a>
+			<li><a href="/replies/">Replies</a>
+		</ul>
+	</nav>
+</header>
+
 ${data.content}
 </body>
 </html>`;

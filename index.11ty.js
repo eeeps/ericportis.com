@@ -4,17 +4,6 @@ exports.data = {
 
 exports.render = function(data) {
 	return `
-<header>
-	<nav>
-		<ul>
-			<li><a href="/">e</a>
-			<li><a href="/longs/">Longs</a>
-			<li><a href="/shorts/">Shorts</a>
-			<li><a href="/likes/">Likes</a>
-			<li><a href="/replies/">Replies</a>
-		</ul>
-	</nav>
-</header>
 
 <main>
 	
