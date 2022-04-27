@@ -54,14 +54,17 @@ module.exports = function( eleventyConfig ) {
 		if ( !data.pagination ) {
 			return '';
 		}
-		let previous = '', next = '';
+		let previous = '', next = '', center = '';
 		if ( data.pagination.href.previous ) {
-			previous = `<a href="${ data.pagination.href.previous }">← Later</a>`;
+			previous = `<a href="${ data.pagination.href.previous }">← Newer</a>`;
+		}
+		if ( data.pagination.href.previous && data.pagination.href.next ) {
+			center = ` • `;
 		}
 		if ( data.pagination.href.next ) {
-			next = `<a href="${ data.pagination.href.next }">Earlier →</a>`;
+			next = `<a href="${ data.pagination.href.next }">Older →</a>`;
 		}
-		return `<nav>${ previous } ${ next }</nav>`;
+		return `<nav>${ previous }${ center }${ next }</nav>`;
 	} );
 	
 }
