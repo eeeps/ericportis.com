@@ -56,10 +56,10 @@ module.exports = function( eleventyConfig ) {
 		}
 		let previous = '', next = '';
 		if ( data.pagination.href.previous ) {
-			previous = `<a href="${ data.pagination.href.previous }">Previous</a>`;
+			previous = `<a href="${ data.pagination.href.previous }">← Later</a>`;
 		}
 		if ( data.pagination.href.next ) {
-			next = `<a href="${ data.pagination.href.next }">Next</a>`;
+			next = `<a href="${ data.pagination.href.next }">Earlier →</a>`;
 		}
 		return `<nav>${ previous } ${ next }</nav>`;
 	} );

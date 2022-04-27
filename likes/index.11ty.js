@@ -4,6 +4,7 @@ exports.data = {
 	"pagination": {
 		"data": "collections.like",
 		"size": 3,
+		"reverse": true,
 		"alias": "likes"
 	}
 };
