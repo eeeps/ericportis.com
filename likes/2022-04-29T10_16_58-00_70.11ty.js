@@ -10,5 +10,3 @@ exports.data = {
 		]
 	}
 };
-
-exports.render = function(data) {}
