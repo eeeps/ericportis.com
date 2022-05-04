@@ -5,7 +5,7 @@ exports.data = {
 		"title": "a tweet",
 		"authors": [
 			{
-				"name":  zachleat
+				"name": "zachleat"
 			}
 		]
 	}
