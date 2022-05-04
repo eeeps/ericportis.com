@@ -1,7 +1,12 @@
 exports.data = {
-	"url": "https://ca.parkindigo.com/en/contact-us",
+	"url": "https://twitter.com/xdesro/status/1446893760898637825",
 	"date": "2022-05-02T08:19:32-07:00",
 	"metadata": {
-		"title": "Contact us"
+		"title": "a tweet",
+		"authors": [
+			{
+				"name": "@xdesro"
+			}
+		]
 	}
 };
