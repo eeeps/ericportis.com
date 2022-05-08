@@ -1,5 +1,4 @@
----json
-{
+exports.data = {
 	"url": "https://dev.to/tigt/routing-im-not-smart-enough-for-a-spa-5hki",
 	"date": "2022-04-20T12:00-07",
 	"metadata": {
@@ -11,5 +10,8 @@
 			}
 		]
 	}
+};
+
+exports.render = function( data ) {
+	return this.renderLike( data );
 }
----

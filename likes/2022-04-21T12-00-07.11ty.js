@@ -1,5 +1,4 @@
----json
-{
+exports.data = {
 	"url": "https://contrachrome.com",
 	"date": "2022-04-21T12:00-07",
 	"metadata": {
@@ -11,5 +10,8 @@
 			}
 		]
 	}
-}
----
+};
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+};

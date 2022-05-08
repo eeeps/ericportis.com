@@ -16,7 +16,19 @@ exports.render = function(data) {
 
 <h1>Likes</h1>
 
-${ data.likes.map( ( like ) => this.renderLike( like.data ) ).join("\n") }
+${ data.likes.map(
+	( like ) => {
+		return `
+<article class="h-entry">
+	<header>
+		<a href="${ like.url }">★</a> 
+		<time class="dt-published">${ this.readableDate( like.date ) }</time>
+	</header>
+${ this.renderLike( like.data ) }
+</article>
+`;
+	}
+).join("") }
 
 </main>
 

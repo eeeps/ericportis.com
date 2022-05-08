@@ -1,3 +1,4 @@
+const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function( eleventyConfig ) {
 	
@@ -13,7 +14,7 @@ module.exports = function( eleventyConfig ) {
 		
 	} );
 	
-	eleventyConfig.addJavaScriptFunction( "renderLike", function( data ) {
+	eleventyConfig.addFilter( "renderLike", function( data ) {
 
 		const title = data.metadata?.title || data.url;
 
@@ -39,13 +40,7 @@ module.exports = function( eleventyConfig ) {
 		}
 
 		return `
-<article class="h-entry">
-	<header>
-		<a href="${ data.page.url }">★</a> 
-		<time class="dt-published">${ this.readableDate( data.page.date ) }</time>
-	</header>
 	<a class="u-like-of" href="${ data.url }">${ title }</a>${ authors ? authors : '' }
-</article>
 `;
 
 	} );
@@ -65,6 +60,12 @@ module.exports = function( eleventyConfig ) {
 			next = `<a href="${ data.pagination.href.next }">Older →</a>`;
 		}
 		return `<nav>${ previous }${ center }${ next }</nav>`;
+	} );
+	
+	eleventyConfig.addPlugin(pluginRss, {
+		posthtmlRenderOptions: {
+			closingSingleTag: "default" // opt-out of <img/>-style XHTML single tags
+		}
 	} );
 	
 }
