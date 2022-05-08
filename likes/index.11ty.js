@@ -3,7 +3,7 @@ exports.data = {
 	"eleventyExcludeFromCollections": true,
 	"pagination": {
 		"data": "collections.like",
-		"size": 3,
+		"size": 12,
 		"reverse": true,
 		"alias": "likes"
 	}
