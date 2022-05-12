@@ -16,3 +16,8 @@ You hear about the importance of testing on slow machines. Good things happen wh
 
 *And also,* [a new M1 MacBook Pro](https://browser.geekbench.com/macs/macbook-pro-13-inch-late-2020) should be arriving at my house sometime this week. I can’t wait.
 
+<div class="update">
+<time datetime="2022-05-06T13:47-07:00">May 6, 2022</time>
+<p>Update! My slow computer <em>also</em> helped me find <em><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1296770#c29">this bug</a></em>, probably!</p>
+<p>Also the new M1 machine is fantastic.</p>
+</div>
