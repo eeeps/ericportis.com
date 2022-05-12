@@ -5,3 +5,7 @@ exports.data = {
 		"title": "What is black and white and read all over?"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

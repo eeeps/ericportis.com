@@ -11,3 +11,7 @@ exports.data = {
 		]
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}
