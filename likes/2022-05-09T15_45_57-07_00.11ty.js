@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Cool Things People Do With Their Blogs | Brain Baking"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

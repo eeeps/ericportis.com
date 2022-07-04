@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Do successful products prioritize familiarity over uniqueness? | LeadDev"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

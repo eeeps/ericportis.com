@@ -5,3 +5,7 @@ exports.data = {
 		"title": "I’m not a goblin, I just play one in Google Docs (Interconnected)"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

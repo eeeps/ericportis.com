@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Mastodon and the future of Twitter"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

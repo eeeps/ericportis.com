@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Notes from a gopher:// site - daverupert.com"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

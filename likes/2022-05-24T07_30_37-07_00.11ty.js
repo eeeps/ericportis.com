@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Loading, Parsing, and Executing JavaScript in 2022 - Jim Nielsen’s Blog"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

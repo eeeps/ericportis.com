@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Generate a Pull Request of Static Content With a Simple HTML Form | CSS-Tricks - CSS-Tricks"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

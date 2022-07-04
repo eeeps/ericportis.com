@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Note: [One year later]()… 16.9 % of the requests… - Nicolas Hoizey"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

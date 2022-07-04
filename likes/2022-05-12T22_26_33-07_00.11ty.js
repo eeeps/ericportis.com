@@ -5,3 +5,7 @@ exports.data = {
 		"title": "The Demise of the Mildly Dynamic Website"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

@@ -5,3 +5,7 @@ exports.data = {
 		"title": "SREcon19 Europe/Middle East/Africa - Pushing through Friction - YouTube"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

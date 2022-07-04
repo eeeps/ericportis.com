@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Nose Spray Vaccines Could Quash COVID Virus Variants - Scientific American"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

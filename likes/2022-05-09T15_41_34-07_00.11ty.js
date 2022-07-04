@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Host your own webmention receiver | Brain Baking"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

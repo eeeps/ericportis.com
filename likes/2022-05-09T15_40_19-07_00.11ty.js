@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Fighting Webmention And Pingback Spam | Brain Baking"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

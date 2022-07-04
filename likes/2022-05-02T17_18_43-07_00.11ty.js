@@ -5,3 +5,7 @@ exports.data = {
 		"title": "The Big Picture"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

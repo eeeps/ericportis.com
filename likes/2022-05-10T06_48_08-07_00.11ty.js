@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Henry Heffernan - Portfolio 2022"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}

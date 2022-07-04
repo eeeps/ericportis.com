@@ -5,3 +5,7 @@ exports.data = {
 		"title": "Eliacocca on Twitter: \"Lmao the Miami GP harbor is just a jpeg\" / Twitter"
 	}
 };
+
+exports.render = function( data ) {
+	return this.renderLike( data );
+}
