@@ -40,7 +40,7 @@ module.exports = function( eleventyConfig ) {
 		}
 
 		return `
-	<a class="u-like-of" href="${ data.url }">${ title }</a>${ authors ? authors : '' }
+	<p><a class="u-like-of" href="${ data.url }">${ title }</a>${ authors ? authors : '' }</p>
 `;
 
 	} );
