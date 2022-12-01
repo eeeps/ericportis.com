@@ -11,7 +11,7 @@ Often, I want to take an image that exists locally on my Mac or iPhone and get a
 - Maybe I want to drop a freshly-minted screenshot into a GitHub comment, or bug report.
  - Maybe I want to email a photo without worrying about attachment/storage quotas.
 
-I end up doing this, what – five? ten? – times a day. Here’s what I used to do:
+I end up doing this, what – five? ten? – times a week? Here’s what I used to do:
 
 1. Type “cloudinary.com/console” into the nearest URL bar.
 2. Enter my username and password.
