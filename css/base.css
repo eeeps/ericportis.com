@@ -3,13 +3,18 @@ html {
 	font-size: clamp(1rem, 3vmin, 2rem);
 	--line-height-factor: 1;
 }
+@media (max-width: 200px) {
+	html {
+		font-size: clamp(0.75rem, 2vmin, 1rem);
+	}
+}
 
 p,
 ul,
 ol,
 dl {
 	max-width: 75ch;
-	line-height: calc( 1.2 * var( --line-height-factor ) );
+	line-height: 1.2;
 	line-height: clamp(1.125em, calc( 5cqi * var( --line-height-factor ) ), 2.125em);
 }
 
