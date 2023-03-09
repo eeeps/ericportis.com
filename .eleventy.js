@@ -1,4 +1,5 @@
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const { DateTime } = require("luxon");
 
 module.exports = function( eleventyConfig ) {
 	
@@ -60,6 +61,24 @@ module.exports = function( eleventyConfig ) {
 			next = `<a href="${ data.pagination.href.next }">Older →</a>`;
 		}
 		return `<nav>${ previous }${ center }${ next }</nav>`;
+	} );
+	
+	// for <updated> dates in RSS...
+	eleventyConfig.addNunjucksFilter( "dateStringToRfc3339", (dateString) => { 
+		// stole this and the luxon dependency from how eleventy does things internally
+		// in getMappedDate(), in /node_modules/@11ty/eleventy/src/Template.js
+		const dateObj = DateTime
+			.fromISO( dateString, { zone: "utc" } )
+			.toJSDate();
+		
+		// and then the rest is just copied from /node_modules/@11ty/eleventy-plugin-rss/src/dateRfc3339.js
+		let s = dateObj.toISOString();
+
+		// remove milliseconds
+		let split = s.split(".");
+		split.pop();
+
+		return split.join("") + "Z";
 	} );
 	
 	eleventyConfig.addPlugin(pluginRss, {
