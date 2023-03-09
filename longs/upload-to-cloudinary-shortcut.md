@@ -1,5 +1,5 @@
 ---
-layout: base.11ty.js
+layout: long.11ty.js
 title: Upload to Cloudinary with a Shortcut
 tags: draft
 ---

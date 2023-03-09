@@ -1,7 +1,8 @@
 ---
-layout: base.11ty.js
+layout: long.11ty.js
 title: My slow computer helped me find a bug
 date: 2022-04-05T12:00-07
+updated: 2022-05-06T13:47-07
 ---
 
 Recently, one of my smarty-pants colleagues ([Yaron Shmueli](https://il.linkedin.com/in/yaron-shmueli-99770b2)) presented some groundbreaking work he’d done on encoding animated AVIFs containing transparency. If [Cloudinary](https://cloudinary.com) could transcode GIFs to animated AVIFs, we could save our customers and our customers’ customers mind-boggling amounts of bandwidth. Amazing! Fantastic!
