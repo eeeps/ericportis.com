@@ -29,7 +29,7 @@ exports.render = function(data) {
 	<section>
 		<h2>Elsewhere</h2>
 		<ul>
-			<li><a href="https://twitter.com/etportis">Twitter</a>
+			<li><a href="https://front-end.social/@eeeps">Mastodon</a>
 			<li><a href="https://instagram.com/etportis">Instagram</a>
 			<li><a href="https://github.com/eeeps">GitHub</a>
 			<li><a href="mailto:e@ericportis.com">e@ericportis.com</a>
