@@ -1,6 +1,7 @@
 html {
 	font-family: system-ui, sans-serif;
 	font-size: clamp(1rem, 3vmin, 2rem);
+	--line-height-factor: 1;
 }
 
 p,
@@ -8,15 +9,19 @@ ul,
 ol,
 dl {
 	max-width: 75ch;
-	line-height: 1.2;
-	line-height: clamp(1.125em, 5cqi, 2.125em);
+	line-height: calc( 1.2 * var( --line-height-factor ) );
+	line-height: clamp(1.125em, calc( 5cqi * var( --line-height-factor ) ), 2.125em);
+}
+
+ul, ol, dl {
+	--line-height-factor: 0.75;
 }
 
 a,
 a:visited {
 	color: rgb( 0% 0% 100% / 1 );
-	text-decoration-thickness: 0.125em;
-	text-decoration-color: rgb( 0% 0% 100% / 0.25 );
+	text-decoration-thickness: max( 0.08em, 1px );
+	text-decoration-color: rgb( 0% 0% 100% / 0.5 );
 }
 a:hover {
 	text-decoration-color: rgb( 0% 0% 100% / 1 )
