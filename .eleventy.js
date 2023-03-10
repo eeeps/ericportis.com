@@ -5,6 +5,8 @@ module.exports = function( eleventyConfig ) {
 	
 	// Copy the `css` folder to the output
 	eleventyConfig.addPassthroughCopy( "css" );
+	// fonts too!
+	eleventyConfig.addPassthroughCopy( "fonts" );
 	
 	eleventyConfig.addJavaScriptFunction( "readableDate", function( date ) {
 		
